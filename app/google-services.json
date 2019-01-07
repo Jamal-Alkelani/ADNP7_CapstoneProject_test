@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "793716350004",
+    "firebase_url": "https://adnp7-capstoneproject.firebaseio.com",
+    "project_id": "adnp7-capstoneproject",
+    "storage_bucket": "adnp7-capstoneproject.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:793716350004:android:c04bde0bd7be081c",
+        "android_client_info": {
+          "package_name": "com.example.gamal.adnp7_capstoneproject"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "793716350004-r3558kf96tsgac8u1ptmio1r6qtnq9i7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB41kFuA3NgCw4BVlgK-3lv0lqmpPeWl74"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
