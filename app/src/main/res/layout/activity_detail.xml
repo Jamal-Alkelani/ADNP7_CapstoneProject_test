@@ -23,6 +23,7 @@
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:contentDescription="@string/coordinates"
             android:src="@drawable/ic_location_on_black_24dp" />
 
         <TextView
@@ -58,6 +59,7 @@
                 android:layout_height="wrap_content">
 
                 <ImageView
+                    android:contentDescription="@string/leaving_time"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentStart="true"
@@ -90,13 +92,14 @@
                 android:layout_marginTop="8dp"
                 android:layout_marginRight="48dp"
                 android:layout_marginBottom="8dp"
-                android:background="#E44E4E"></LinearLayout>
+                android:background="#E44E4E"/>
 
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
 
                 <ImageView
+                    android:contentDescription="@string/leaving_location"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentStart="true"
@@ -129,13 +132,14 @@
                 android:layout_marginTop="8dp"
                 android:layout_marginRight="48dp"
                 android:layout_marginBottom="8dp"
-                android:background="#E44E4E"></LinearLayout>
+                android:background="#E44E4E"/>
 
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
 
                 <ImageView
+                    android:contentDescription="@string/final_travel_location"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentStart="true"
@@ -168,13 +172,14 @@
                 android:layout_marginTop="8dp"
                 android:layout_marginRight="48dp"
                 android:layout_marginBottom="8dp"
-                android:background="#E44E4E"></LinearLayout>
+                android:background="#E44E4E"/>
 
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
 
                 <ImageView
+                    android:contentDescription="@string/driver_name"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentStart="true"
@@ -207,13 +212,14 @@
                 android:layout_marginTop="8dp"
                 android:layout_marginRight="48dp"
                 android:layout_marginBottom="8dp"
-                android:background="#E44E4E"></LinearLayout>
+                android:background="#E44E4E"/>
 
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
 
                 <ImageView
+                    android:contentDescription="@string/driver_phone_number"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentStart="true"
@@ -225,6 +231,7 @@
                     android:src="@drawable/ic_phone_iphone_black_24dp" />
 
                 <TextView
+
                     android:id="@+id/tv_driverPhoneNumber"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -246,13 +253,14 @@
                 android:layout_marginTop="8dp"
                 android:layout_marginRight="48dp"
                 android:layout_marginBottom="8dp"
-                android:background="#E44E4E"></LinearLayout>
+                android:background="#E44E4E"/>
 
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
 
                 <ImageView
+                    android:contentDescription="@string/number_of_passengers"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentStart="true"
@@ -285,7 +293,7 @@
                 android:layout_marginTop="8dp"
                 android:layout_marginRight="48dp"
                 android:layout_marginBottom="8dp"
-                android:background="#E44E4E"></LinearLayout>
+                android:background="#E44E4E"/>
 
 
         </LinearLayout>
@@ -293,6 +301,7 @@
     </ScrollView>
 
     <android.support.design.widget.FloatingActionButton
+        android:contentDescription="@string/call_driver"
         android:id="@+id/callDriver"
         android:layout_width="56dp"
         android:layout_height="56dp"
@@ -316,7 +325,7 @@
         android:layout_marginEnd="143dp"
         android:layout_marginRight="143dp"
         android:layout_marginBottom="8dp"
-        android:text="How You Found My Driving ?"
+        android:text="@string/rating_bar_text"
         android:textColor="@color/SlateGray"
         app:layout_constraintBottom_toTopOf="@+id/ratingBar2"
         app:layout_constraintEnd_toStartOf="@+id/callDriver"
@@ -325,6 +334,7 @@
         app:layout_constraintTop_toBottomOf="@+id/scrollView2" />
 
     <RatingBar
+        android:contentDescription="@string/rate_the_driver"
         android:id="@+id/ratingBar2"
         style="@style/Widget.AppCompat.RatingBar.Small"
         android:layout_width="wrap_content"

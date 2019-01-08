@@ -19,4 +19,31 @@
     <string name="message_token_format" translatable="false">InstanceID Token: %s</string>
     <string name="need_location_permission_message">App has no Permission To Get Location</string>
     <string name="setup_geofences">Setup Geofences</string>
+    <string name="leaving_time">leaving time</string>
+    <string name="leaving_location">leaving location</string>
+    <string name="final_travel_location">final travel location</string>
+    <string name="driver_name">driver name</string>
+    <string name="driver_phone_number">driver phone number</string>
+    <string name="call_driver">call driver</string>
+    <string name="rate_the_driver">rate the driver</string>
+    <string name="coordinates">coordinates</string>
+    <string name="number_of_passengers">number of passengers</string>
+    <string name="rating_bar_text">How You Found My Driving ?</string>
+    <string name="time">11:54 AM</string>
+    <string name="date_home">14 NOV, 2018</string>
+    <string name="iv_logo_name_login">iv_logo_name_login</string>
+    <string name="don_t_have_an_account_create_one">Don\'t have an account ? Create One</string>
+    <string name="splash_screen_logo">splash_screen_logo</string>
+    <string name="time_widget">time_widget</string>
+    <string name="date_widget">date widget</string>
+    <string name="palces_error_msg">Oops It Seems There is No places !</string>
+    <string name="appointment_marker">appointment marker</string>
+    <string name="view_more_details">view more details</string>
+    <string name="more">More</string>
+    <string name="marker_text_detail_activity">Marker in Sydney</string>
+    <string name="google_play_not_available_err_msg">GooglePlayServices Not Available [%s]</string>
+    <string name="place_picker_exception_err_msg">PlacePicker Exception: %s</string>
+    <string name="toolbar_title">My Places</string>
+    <string name="item_deleted_toast_msg">Item Deleted</string>
+
 </resources>

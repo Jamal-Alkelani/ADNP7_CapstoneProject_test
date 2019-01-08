@@ -1,15 +1,19 @@
 package com.example.gamal.adnp7_capstoneproject.Activities;
 
+import android.annotation.TargetApi;
 import android.app.Dialog;
 import android.arch.lifecycle.LifecycleOwner;
 import android.arch.lifecycle.Observer;
 import android.content.Intent;
 import android.content.pm.PackageManager;
+import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
+import android.media.Image;
+import android.os.Build;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
+import android.support.annotation.RequiresApi;
 import android.support.v4.app.ActivityCompat;
-import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.DefaultItemAnimator;
@@ -17,6 +21,8 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.support.v7.widget.helper.ItemTouchHelper;
+import android.transition.Transition;
+import android.transition.TransitionInflater;
 import android.util.Log;
 import android.util.Pair;
 import android.view.Menu;
@@ -26,7 +32,9 @@ import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.ListView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.gamal.adnp7_capstoneproject.Adapters.AppointmentsAdapter;
@@ -52,6 +60,7 @@ import com.google.android.gms.location.places.Place;
 import com.google.android.gms.location.places.PlaceBuffer;
 import com.google.android.gms.location.places.Places;
 import com.google.android.gms.location.places.ui.PlacePicker;
+import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -68,6 +77,7 @@ public class HomeActivity extends AppCompatActivity implements AppointmentsAdapt
     AppDatabase appDatabase;
     private GoogleApiClient mClient;
     private Geofencing mGeofencing;
+    private final String IMG_URL="http://i.imgur.com/DvpvklR.png";
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -92,18 +102,18 @@ public class HomeActivity extends AppCompatActivity implements AppointmentsAdapt
                 Intent i = builder.build(this);
                 startActivityForResult(i, PLACE_PICKER_REQUEST);
             } catch (GooglePlayServicesRepairableException e) {
-                Log.e("xx", String.format("GooglePlayServices Not Available [%s]", e.getMessage()));
+                Log.e("xx", String.format(getString(R.string.google_play_not_available_err_msg), e.getMessage()));
             } catch (GooglePlayServicesNotAvailableException e) {
-                Log.e("xx", String.format("GooglePlayServices Not Available [%s]", e.getMessage()));
+                Log.e("xx", String.format(getString(R.string.google_play_not_available_err_msg), e.getMessage()));
             } catch (Exception e) {
-                Log.e("xx", String.format("PlacePicker Exception: %s", e.getMessage()));
+                Log.e("xx", String.format(getString(R.string.place_picker_exception_err_msg), e.getMessage()));
             }
         }
         if (item.getItemId() == R.id.mi_geofences) {
             final Dialog dialog = new Dialog(this);
             final List<String> IDs = new ArrayList<>();
             dialog.setContentView(R.layout.li_places);
-            dialog.setTitle("My Places");
+            dialog.setTitle(R.string.toolbar_title);
             ListView listView = dialog.findViewById(R.id.lv_places);
             final ArrayAdapter<String> arrayAdapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1);
             listView.setAdapter(arrayAdapter);
@@ -121,7 +131,7 @@ public class HomeActivity extends AppCompatActivity implements AppointmentsAdapt
                                     runOnUiThread(new Runnable() {
                                         @Override
                                         public void run() {
-                                            Toast.makeText(HomeActivity.this, "Item Deleted", Toast.LENGTH_SHORT).show();
+                                            Toast.makeText(HomeActivity.this, R.string.item_deleted_toast_msg, Toast.LENGTH_SHORT).show();
                                             dialog.dismiss();
                                         }
                                     });
@@ -163,12 +173,16 @@ public class HomeActivity extends AppCompatActivity implements AppointmentsAdapt
     }
 
 
+    @TargetApi(Build.VERSION_CODES.LOLLIPOP)
+    @RequiresApi(api = Build.VERSION_CODES.KITKAT)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
 
 
+        Transition transition=TransitionInflater.from(this).inflateTransition(R.transition.slide);
+        getWindow().setEnterTransition(transition);
         if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.LOLLIPOP) {
             Toolbar toolbar = findViewById(R.id.toolbar);
             setSupportActionBar(toolbar);
@@ -206,6 +220,21 @@ public class HomeActivity extends AppCompatActivity implements AppointmentsAdapt
                 .build();
 
         mGeofencing = new Geofencing(this, mClient);
+
+        ImageView imageView = new ImageView(this);
+
+        Picasso.get()
+                .load(IMG_URL)
+                .resize(280,280)
+                .centerCrop()
+                .error(R.drawable.cover)
+                .into(imageView);
+
+        TextView main_image=findViewById(R.id.main_image);
+        if (main_image!=null) {
+            main_image.setBackground(imageView.getDrawable());
+
+        }
 
     }
 

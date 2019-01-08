@@ -16,6 +16,7 @@
             android:orientation="vertical">
 
             <ImageView
+                android:contentDescription="@string/appointment_marker"
                 android:id="@+id/iv_circle"
                 android:layout_width="24dp"
                 android:layout_height="24dp"
@@ -27,7 +28,8 @@
                 android:layout_marginTop="8dp"
                 android:layout_marginLeft="12dp"
                 android:layout_height="50dp"
-                android:background="@color/LightSlateGray"></LinearLayout>
+                android:background="@color/LightSlateGray"
+                android:layout_marginStart="12dp" />
         </LinearLayout>
 
     <android.support.constraint.ConstraintLayout
@@ -53,6 +55,7 @@
             tools:text="07:00 AM - Bus Station" />
 
         <ImageView
+            android:contentDescription="@string/view_more_details"
             android:id="@+id/iv_arrow_more"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -78,7 +81,7 @@
             android:layout_marginLeft="4dp"
             android:layout_marginTop="16dp"
             android:layout_marginBottom="8dp"
-            android:text="More"
+            android:text="@string/more"
             android:textColor="@color/LightSlateGray"
             android:textSize="16sp"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -99,6 +102,7 @@
             app:layout_constraintTop_toBottomOf="@+id/tv_appointment">
 
             <ImageView
+                android:contentDescription="@string/driver_name"
                 android:id="@+id/imageView3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -111,14 +115,17 @@
                 android:textColor="@color/white"
                 android:textSize="14sp"
                 android:layout_marginLeft="4dp"
-                tools:text="Abed Jaba" />
+                tools:text="Abed Jaba"
+                android:layout_marginStart="4dp" />
 
             <ImageView
+                android:contentDescription="@string/final_travel_location"
                 android:id="@+id/imageView4"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="24dp"
-                android:src="@drawable/ic_airplanemode_active_black_24dp" />
+                android:src="@drawable/ic_airplanemode_active_black_24dp"
+                android:layout_marginStart="24dp" />
 
             <TextView
                 android:id="@+id/tv_wjha"
@@ -127,7 +134,8 @@
                 android:textColor="@color/white"
                 android:layout_marginLeft="4dp"
                 android:textSize="14sp"
-                tools:text="Jenin - Nablus" />
+                tools:text="Jenin - Nablus"
+                android:layout_marginStart="4dp" />
         </LinearLayout>
 
     </android.support.constraint.ConstraintLayout>

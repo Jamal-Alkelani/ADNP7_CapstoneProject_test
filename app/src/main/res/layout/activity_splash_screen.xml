@@ -8,6 +8,7 @@
     tools:context=".Activities.SplashScreen">
 
     <ImageView
+        android:contentDescription="@string/splash_screen_logo"
         android:id="@+id/imageView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -22,6 +23,7 @@
         app:srcCompat="@drawable/logo" />
 
     <ImageView
+        android:contentDescription="@string/splash_screen_logo"
         android:id="@+id/imageView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

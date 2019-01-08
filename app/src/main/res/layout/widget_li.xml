@@ -14,6 +14,7 @@
         android:orientation="vertical">
 
         <ImageView
+            android:contentDescription="@string/appointment_marker"
             android:id="@+id/iv_circle"
             android:layout_width="24dp"
             android:layout_height="24dp"
@@ -25,7 +26,8 @@
             android:layout_marginTop="8dp"
             android:layout_marginLeft="12dp"
             android:layout_height="50dp"
-            android:background="@color/LightSlateGray"></LinearLayout>
+            android:background="@color/LightSlateGray"
+            android:layout_marginStart="12dp" />
     </LinearLayout>
 
     <TextView
@@ -39,7 +41,6 @@
         android:layout_marginLeft="60dp"
         android:layout_marginTop="19dp"
         android:layout_marginBottom="8dp"
-        android:layout_weight="1"
         android:textColor="@color/white"
         android:textSize="24sp"
         tools:text="07:00 AM - Bus Station" />
@@ -55,6 +56,7 @@
         android:orientation="horizontal">
 
         <ImageView
+            android:contentDescription="@string/driver_name"
             android:id="@+id/imageView3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -67,14 +69,17 @@
             android:layout_marginLeft="4dp"
             android:textColor="@color/white"
             android:textSize="14sp"
-            tools:text="Abed Jaba" />
+            tools:text="Abed Jaba"
+            android:layout_marginStart="4dp" />
 
         <ImageView
+            android:contentDescription="@string/final_travel_location"
             android:id="@+id/imageView4"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="24dp"
-            android:src="@drawable/ic_airplanemode_active_black_24dp" />
+            android:src="@drawable/ic_airplanemode_active_black_24dp"
+            android:layout_marginStart="24dp" />
 
         <TextView
             android:id="@+id/tv_wjha"
@@ -83,6 +88,7 @@
             android:layout_marginLeft="4dp"
             android:textColor="@color/white"
             android:textSize="14sp"
-            tools:text="Jenin - Nablus" />
+            tools:text="Jenin - Nablus"
+            android:layout_marginStart="4dp" />
     </LinearLayout>
 </RelativeLayout>

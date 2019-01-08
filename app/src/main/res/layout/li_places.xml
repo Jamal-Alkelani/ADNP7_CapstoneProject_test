@@ -12,7 +12,7 @@
         android:visibility="gone"
         android:textColor="@color/black"
         android:gravity="center"
-        android:text="Oops It Seems There is No places !"/>
+        android:text="@string/palces_error_msg"/>
 
     <ListView
         android:id="@+id/lv_places"

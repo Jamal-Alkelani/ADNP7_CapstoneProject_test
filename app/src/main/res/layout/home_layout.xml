@@ -59,7 +59,7 @@
         android:layout_marginStart="32dp"
         android:layout_marginLeft="32dp"
         android:layout_marginTop="16dp"
-        android:text="11:54 AM"
+        android:text="@string/time"
         android:textColor="@color/white"
         android:textSize="48sp"
         tools:text="11:54 AM" />
@@ -74,7 +74,7 @@
         android:layout_marginStart="38dp"
         android:layout_marginLeft="38dp"
         android:layout_marginBottom="272dp"
-        android:text="14 NOV, 2018"
+        android:text="@string/date_home"
         android:textColor="@color/DarkGray"
         android:textSize="12sp"
         tools:text="14 NOV, 2018" />
